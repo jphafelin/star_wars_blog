@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import starWarsLogo from "../../img/star-wars-logo.png";
+// https://www.gamerfocus.co/wp-content/uploads/2018/03/Star-Wars-Logo.png
 
 export const Navbar = () => {
   return (
@@ -7,7 +9,7 @@ export const Navbar = () => {
       <div className="container-fluid d-flex justify-content-between mx-md-4 mt-4 mb-1">
         <div>
           <Link className="navbar-brand" to="/">
-            <img height="70" src="https://www.gamerfocus.co/wp-content/uploads/2018/03/Star-Wars-Logo.png"/>
+            <img height="70" src={starWarsLogo}/>
           </Link>
         </div>
         <div>
