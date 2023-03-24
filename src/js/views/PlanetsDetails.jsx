@@ -3,7 +3,7 @@ import { Context } from "../store/appContext.js";
 import { Navigate } from "react-router-dom";
 
 
-export const DetailsPlanets = () => {
+export const PlanetsDetails = () => {
     const { store, actions } = useContext(Context);
     const selectPlanet = store.selectPlanet;
     const urlImage = "https://starwars-visualguide.com/assets/img/planets/" + selectPlanet.id + ".jpg";

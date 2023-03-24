@@ -8,7 +8,7 @@ import { Context } from '../store/appContext';
 
 
 
-export const CardPlanets = ({ id, name, population, terrain, climate, orbiltal_period, rotation_period, diameter }) => {
+export const PlanetsCard = ({ id, name, population, terrain, climate, orbiltal_period, rotation_period, diameter }) => {
     const { store, actions } = useContext(Context);
     const planet = store.planet;
 
