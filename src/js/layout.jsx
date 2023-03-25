@@ -10,7 +10,7 @@ import { Starships } from "./views/Starships.jsx";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar.jsx";
-import { Footer } from "./component/footer.jsx";
+import { Footer } from "./component/Footer.jsx";
 
 // people: https://starwars-visualguide.com/assets/img/characters/1.jpg
 // host = "https://starwars-visualguide.com/assets/img/"
