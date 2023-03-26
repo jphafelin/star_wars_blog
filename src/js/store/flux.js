@@ -6,9 +6,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 			favorites: []
 		},
 		actions: {
-			// Use getActions to call a function within a fuction
-			exampleFunction: () => { getActions().changeColor(0, "green"); },
-			loadSomeData: () => { /** fetch().then().then(data => setStore({ "foo": data.bar })) */ },
             getPlanet: (planet) => { setStore({ selectPlanet: planet, }); },
 			getPlanets: async () => {
                 const store = getStore();
@@ -28,7 +25,15 @@ const getState = ({ getStore, getActions, setStore }) => {
                 }
             },
             addFavorite: ({id, type, name}, favorites) => {
-                setStore({ favorites: [...favorites, {id, type, name}]});
+                const exist = favorites.find(item => item.name == name);
+                // console.log("existe?:", exist);
+                if (exist == undefined) {
+                    setStore({ favorites: [...favorites, {id, type, name}]});
+                }
+            },
+            removeFavorite: (removeItem, favorites) => {
+                // console.log(removeItem, favorites)
+                setStore({ favorites: favorites.filter(item => item != removeItem)})
             },
 		}
 	};
