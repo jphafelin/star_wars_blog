@@ -27,6 +27,9 @@ const getState = ({ getStore, getActions, setStore }) => {
                     setStore({ planets: JSON.parse(localStorage.getItem("planets")), });
                 }
             },
+            addFavorite: ({id, type, name}, favorites) => {
+                setStore({ favorites: [...favorites, {id, type, name}]});
+            },
 		}
 	};
 };

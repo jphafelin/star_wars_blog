@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { BtnFavorites } from "./BtnFavorites.jsx";
+
 import starWarsLogo from "../../img/star-wars-logo.png";
 // https://www.gamerfocus.co/wp-content/uploads/2018/03/Star-Wars-Logo.png
 
@@ -9,7 +11,7 @@ export const Navbar = () => {
       <div className="container-fluid d-flex justify-content-between mx-md-4 mt-4 mb-1">
         <div>
           <Link className="navbar-brand" to="/">
-            <img height="70" src={starWarsLogo}/>
+            <img height="55" src={starWarsLogo}/>
           </Link>
         </div>
         <div>
@@ -24,19 +26,7 @@ export const Navbar = () => {
               <Link className="nav-link link-secondary" to="/starships">Starships</Link>
             </li>
             <li className="nav-item">
-              <div className="dropdown">
-                <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Favorites  
-                  <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">
-                    4
-                  </span>
-                </button>
-                <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="#">Action</a></li>
-                  <li><a className="dropdown-item" href="#">Another action</a></li>
-                  <li><a className="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </div>
+              <BtnFavorites/>
             </li>
           </ul>
         </div>

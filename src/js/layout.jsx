@@ -9,7 +9,7 @@ import { PlanetsDetails } from "./views/PlanetsDetails.jsx";
 import { Starships } from "./views/Starships.jsx";
 import injectContext from "./store/appContext";
 
-import { Navbar } from "./component/navbar.jsx";
+import { Navbar } from "./component/Navbar.jsx";
 import { Footer } from "./component/Footer.jsx";
 
 // people: https://starwars-visualguide.com/assets/img/characters/1.jpg
@@ -18,7 +18,7 @@ import { Footer } from "./component/Footer.jsx";
 // id = #
 // ext = ".jpg"
 
-//create your first component
+// create your first component
 const Layout = () => {
 	// the basename is used when your project is published in a subdirectory and not in the root of the domain
 	// you can set the basename on the .env file located at the root of this project, E.g: BASENAME=/react-hello-webapp/
