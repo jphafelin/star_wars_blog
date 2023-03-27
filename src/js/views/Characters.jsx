@@ -23,8 +23,8 @@ export const Characters = () => {
                 <div className="card-body">
                   <h5 className="card-title">{item.name}</h5>
                   <div className="d-flex justify-content-between">
-                    <Link to={`/characters/${item.id}`} className="btn btn-secondary" 
-                      onClick={() => actions.getCharacter({ item })}>
+                    <Link to={`/characters/${id}`} className="btn btn-secondary" 
+                      onClick={() => actions.getCharacter({ urlImage, item })}>
                         Details
                     </Link>
                     <Link className="btn btn-outline-warning" 
