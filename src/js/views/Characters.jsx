@@ -1,15 +1,10 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-
 import { Context } from "../store/appContext";
 
 
 export const Characters = () => {
 	const { store, actions } = useContext(Context);
-	// Traemos los planets del store
-	// const characters = store.characters;
-  // const selectPlanet = store.selectPlanet;
-
 
 	return (
 		<div className="container bg-dark mb-3">
@@ -33,7 +28,7 @@ export const Characters = () => {
                         Details
                     </Link>
                     <Link className="btn btn-outline-warning" 
-                      onClick={() => actions.addFavorite({ id, type: 'Character', name }, store.favorites)}>
+                      onClick={() => actions.addFavorite({ id: index, type: 'Character', name: item.name }, store.favorites)}>
                         <i className="far fa-heart fa-lg"></i>
                     </Link>
                   </div>
