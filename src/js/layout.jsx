@@ -3,7 +3,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/Home.jsx";
-import { People } from "./views/People.jsx";
+import { Characters } from "./views/Characters.jsx";
+import { CharactersDetails } from "./views/CharactersDetails.jsx";
 import { Planets } from "./views/Planets.jsx";
 import { PlanetsDetails } from "./views/PlanetsDetails.jsx";
 import { Starships } from "./views/Starships.jsx";
@@ -31,7 +32,8 @@ const Layout = () => {
 					<Navbar />
 					<Routes>
 						<Route path="/" element={<Home />} />
-						<Route path="/people" element={<People />} />
+						<Route path="/characters" element={<Characters />} />
+						<Route path="/characters/:theid" element={<CharactersDetails />} />
 						<Route path="/planets" element={<Planets />} />
 						<Route path="/planets/:theid" element={<PlanetsDetails />} />
 						<Route path="/starships/" element={<Starships />} />

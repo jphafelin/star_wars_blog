@@ -17,7 +17,7 @@ export const Navbar = () => {
         <div>
           <ul className="nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link link-secondary" to="/people">People</Link>
+              <Link className="nav-link link-secondary" to="/characters">Characters</Link>
             </li>
       			<li className="nav-item">
               <Link className="nav-link link-secondary" to="/planets">Planets</Link>
