@@ -12,7 +12,7 @@ export const PlanetsDetails = () => {
     };
 
     if (!selectPlanet.id) {
-        return (<Navigate to="/reload"/>)
+        return (<Navigate to="/planets"/>)
     } else {
         return (
             <div className="container bg-dark">

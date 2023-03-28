@@ -11,9 +11,9 @@ export const CharactersDetails = () => {
       e.target.src = "https://starwars-visualguide.com/assets/img/placeholder.jpg";
   };
 
-/*    if (!selectCharacter.id) { 
-    return (<Navigate to="/reload"/>)
-  } else { */
+  if (!selectCharacter.id) { 
+    return (<Navigate to="/characters"/>)
+  } else {
     return (
       <div className="container bg-dark">
         <div className="card mb-3  bg-dark text-light">
@@ -38,4 +38,5 @@ export const CharactersDetails = () => {
         </div>
       </div>
     );
+  }
 }
