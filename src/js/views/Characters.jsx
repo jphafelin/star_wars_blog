@@ -8,13 +8,14 @@ export const Characters = () => {
 
 	return (
 		<div className="container bg-dark mb-3">
-      <h1 className="text-light text-center pt-4">Characters</h1>
+			<h1 className="text-light text-center pt-4">Characters</h1>
 			<div className="row row-cols-1 row-cols-md-3 row-cols-xl-5 g-2">
 				{ store.characters.map((item, index) => {
-          console.log(item, index)
+          // console.log(item, index)
           const id = index + 1;
           const urlImage = "https://starwars-visualguide.com/assets/img/characters/" + id + ".jpg";
           const handleOnErrorImg = (e) => {e.target.src = "https://starwars-visualguide.com/assets/img/placeholder.jpg"};
+
           return (
             <div className="col">
               <h2>Item {index}</h2>
@@ -42,29 +43,3 @@ export const Characters = () => {
 		</div>
 	);
 };
-
-{/* 
-			<ul className="list-group">
-				{store.demo.map((item, index) => {
-					return (
-						<li
-							key={index}
-							className="list-group-item d-flex justify-content-between"
-							style={{ background: item.background }}>
-							<Link to={"/single/" + index}>
-								<span>Link to: {item.title}</span>
-							</Link>
-							{// Conditional render example
-							// Check to see if the background is orange, if so, display the message
-							item.background === "orange" ? (
-								<p style={{ color: item.initial }}>
-									Check store/flux.js scroll to the actions to see the code
-								</p>
-							) : null}
-							<button className="btn btn-success" onClick={() => actions.changeColor(index, "orange")}>
-								Change Color
-							</button>
-						</li>
-					);
-				})}
-			</ul> */}

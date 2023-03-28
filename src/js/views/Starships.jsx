@@ -1,12 +1,7 @@
-import React, { useState, useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
-
-import { Context } from "../store/appContext";
+import React from "react";
 
 
 export const Starships = () => {
-	const { store, actions } = useContext(Context);
-
 	return (
 		<div className="container bg-dark mb-3">
       <h1 className="text-light text-center pt-4">Starships</h1>
@@ -19,8 +14,8 @@ export const Starships = () => {
               <h5 className="card-title">Millennium Falcon</h5>
               <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               <div className="d-flex justify-content-between">
-                <Link to="#" className="btn btn-secondary">Details</Link>
-                <Link to="#" className="btn btn-outline-warning"><i className="far fa-heart fa-lg"></i></Link>
+                <span to="#" className="btn btn-secondary">Details</span>
+                <span to="#" className="btn btn-outline-warning"><i className="far fa-heart fa-lg"></i></span>
               </div>
             </div>
           </div>

@@ -11,10 +11,12 @@ const getState = ({ getStore, getActions, setStore }) => {
       getCharacters: async () => {
           const store = getStore();
           if (localStorage.getItem("characters") === null) {
-            const response = await fetch(`https://swapi.dev/api/people`, {
+            const url = `https://swapi.dev/api/people`;
+            const requestOption = {
               method: "GET",
               ContentType: "application/json",
-            });
+            };
+            const response = await fetch(url, requestOption);
             if (response.ok) {
               const data = await response.json();
               setStore({ characters: data.results, });
@@ -31,10 +33,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 			getPlanets: async () => {
           const store = getStore();
           if (localStorage.getItem("planets") === null) {
-            const response = await fetch(`https://swapi.dev/api/planets`, {
+            const url = `https://swapi.dev/api/planets`;
+            const requestOption = {
               method: "GET",
               ContentType: "application/json",
-            });
+            };
+            const response = await fetch(url, requestOption);
             if (response.ok) {
               const data = await response.json();
               setStore({ planets: data.results, });

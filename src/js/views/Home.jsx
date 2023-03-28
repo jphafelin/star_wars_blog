@@ -7,7 +7,7 @@ import back0 from "../../img/star-wars-back0.jpg";
 export const Home = () => (
 	<div className="container-fluid text-center my-5 bg-dark">
 		<div className="cover-container d-flex w-75 p-4 mx-auto flex-column">
-      <img className="d-block w-100" src={back0} alt="Star Wars timeline"/>
-    </div>
+			<img className="d-block w-100" src={back0} alt="Star Wars timeline"/>
+		</div>
 	</div>
 );

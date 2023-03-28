@@ -37,7 +37,6 @@ const Layout = () => {
 						<Route path="/planets" element={<Planets />} />
 						<Route path="/planets/:theid" element={<PlanetsDetails />} />
 						<Route path="/starships/" element={<Starships />} />
-						<Route path="/reload" element={<h1 style={{color: "white"}}>400 - Bad Request.<br/><small>You must navigate this application by menus and buttons</small></h1>}/>
 						<Route path="*" element={<h1 style={{color: "white"}}>404 - Page not found!</h1>}/>
 					</Routes>
 					<Footer />
