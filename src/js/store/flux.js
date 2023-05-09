@@ -5,7 +5,9 @@ const getState = ({ getStore, getActions, setStore }) => {
       selectCharacter: [],
 			planets: [],
       selectPlanet: [],
-			favorites: []
+			favorites: [],
+      starships: [],
+      selectStarship: []
 		},
 		actions: {
       getCharacters: async () => {
@@ -52,6 +54,29 @@ const getState = ({ getStore, getActions, setStore }) => {
           };
       },
       getPlanet: (planet) => { setStore({ selectPlanet: planet, }); },
+      getStarships: async () => {
+        const store = getStore();
+        if (localStorage.getItem("starships") === null) {
+          const url = `https://swapi.dev/api/starships`;
+          const requestOption = {
+            method: "GET",
+            ContentType: "application/json",
+          };
+          const response = await fetch(url, requestOption);
+          if (response.ok) {
+            const data = await response.json();
+            setStore({ starships: data.results, });
+            localStorage.setItem(`starships`, JSON.stringify(store.starships));
+            let storage = localStorage.getItem("starships");
+          } else {
+            console.log("error: ", response.status, response.statusText);
+          }
+        } else {
+          setStore({ starships: JSON.parse(localStorage.getItem("starships")), });
+        };
+    },
+    getStarship: (starship) => { setStore({ selectStarship: starship, }); },
+
       addFavorite: ({id, type, name}, favorites) => {
           const exist = favorites.find(item => item.name == name);
           // console.log("existe?:", exist);

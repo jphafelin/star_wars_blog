@@ -8,6 +8,7 @@ import { CharactersDetails } from "./views/CharactersDetails.jsx";
 import { Planets } from "./views/Planets.jsx";
 import { PlanetsDetails } from "./views/PlanetsDetails.jsx";
 import { Starships } from "./views/Starships.jsx";
+import { StarshipsDetails } from "./views/StarshipsDetails.jsx";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/Navbar.jsx";
@@ -37,6 +38,7 @@ const Layout = () => {
 						<Route path="/planets" element={<Planets />} />
 						<Route path="/planets/:theid" element={<PlanetsDetails />} />
 						<Route path="/starships/" element={<Starships />} />
+						<Route path="/starships/:theid" element={<StarshipsDetails />} />
 						<Route path="*" element={<h1 style={{color: "white"}}>404 - Page not found!</h1>}/>
 					</Routes>
 					<Footer />

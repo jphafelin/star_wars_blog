@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import back0 from "../../img/star-wars-back0.jpg";
+import back0 from "../../img/star-wars.jpg";
 // import back1 from "../../img/star-wars-back1.jpg";
 // import back2 from "../../img/star-wars-back2.jpg";
 
@@ -11,3 +11,4 @@ export const Home = () => (
 		</div>
 	</div>
 );
+
